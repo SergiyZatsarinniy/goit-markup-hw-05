@@ -502,15 +502,36 @@ body {
   flex-basis: calc((100% - 48px) / 3);
 }
 
-.link {
+.portfolio-card-link {
+  position: relative;
   display: block;
   height: 100%;
 }
 
 .portfolio-card-link:hover,
-.portfolio-card-active:focus {
+.portfolio-card-link:focus {
   box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08),
     0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
+}
+
+.product-picture {
+  position: relative;
+}
+
+.overlay-project-card {
+  padding-top: 32px;
+  padding-left: 40px;
+  padding-right: 40px;
+  position: absolute;
+  width: 360px;
+  height: 300px;
+  top: 0;
+  left: 0;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.02em;
+  color: var(--light-color);
+  background-color: var(--action-color);
 }
 
 .project-card-content-wrapper {
