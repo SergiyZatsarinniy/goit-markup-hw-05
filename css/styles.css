@@ -21,6 +21,7 @@
   --icon-border-bg-color: #8e8f99;
   --border-project-card-color: #f4f4fd;
   --transition-dur-and-func: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  --backdrop-bg-color: rgba(46, 47, 66, 0.4);
 }
 
 h1,
@@ -37,6 +38,23 @@ ol {
   margin-top: 0;
   margin-bottom: 0;
   padding-left: 0;
+}
+
+button {
+  cursor: pointer;
+}
+
+.visually-hidden {
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  border: 0;
+  padding: 0;
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  margin: -1px;
 }
 
 img {
@@ -213,7 +231,6 @@ body {
   font-size: 16px;
   background-color: var(--action-color);
   color: var(--third-text-color);
-  cursor: pointer;
   text-align: center;
   letter-spacing: 0.04em;
   border: none;
@@ -473,7 +490,6 @@ body {
   padding-bottom: 12px;
   background-color: var(--light-color);
   color: var(--action-color);
-  cursor: pointer;
   font-family: inherit;
   text-align: center;
   font-size: 16px;
@@ -592,15 +608,58 @@ body {
   color: var(--secondary-text-color);
 }
 
-.visually-hidden {
-  position: absolute;
-  white-space: nowrap;
-  width: 1px;
-  height: 1px;
-  overflow: hidden;
-  border: 0;
-  padding: 0;
-  clip: rect(0 0 0 0);
-  clip-path: inset(50%);
-  margin: -1px;
+/*------ MODAL WINDOW ------*/
+.backdrop {
+  position: fixed;
+  z-index: 100;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: var(--backdrop-bg-color);
 }
+
+.modal {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 408px;
+  height: 576px;
+  background: #fcfcfc;
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 1px 3px rgba(0, 0, 0, 0.12),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+}
+
+.modal-close-btn {
+  position: absolute;
+  top: 24px;
+  right: 24px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background: var(--accent-color);
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  padding: 0;
+  transition: background-color var(--transition-dur-and-func);
+}
+
+.modal-close-btn-icon {
+  transition: fill var(--transition-dur-and-func);
+}
+
+.modal-close-btn:hover,
+.modal-close-btn:focus {
+  background-color: var(--pressed-state-color);
+}
+
+.modal-close-btn:hover .modal-close-btn-icon,
+.modal-close-btn:focus .modal-close-btn-icon {
+  fill: #ffffff;
+}
+
+/*------ MODAL WINDOW ------*/
