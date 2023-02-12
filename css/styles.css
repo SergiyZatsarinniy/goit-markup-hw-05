@@ -132,6 +132,32 @@ body {
   color: var(--action-color);
 }
 
+.current {
+  color: var(--pressed-state-color);
+}
+
+.current-studio::after {
+  position: absolute;
+  display: block;
+  content: '';
+  width: 48px;
+  height: 4px;
+  background-color: var(--pressed-state-color);
+  border-radius: 2px;
+  margin-top: 21px;
+}
+
+.current-portfolio::after {
+  position: absolute;
+  display: block;
+  content: '';
+  width: 66px;
+  height: 4px;
+  background-color: var(--pressed-state-color);
+  border-radius: 2px;
+  margin-top: 21px;
+}
+
 .address {
   display: flex;
   gap: 40px;
