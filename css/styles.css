@@ -135,7 +135,6 @@ body {
 
 .current {
   color: var(--pressed-state-color);
-  position: relative;
 }
 
 .current::after {
