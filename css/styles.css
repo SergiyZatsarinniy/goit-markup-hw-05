@@ -101,13 +101,13 @@ body {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding-top: 24px;
-  padding-bottom: 24px;
 }
 
 .page-nav {
   display: flex;
   align-items: center;
+  padding-top: 24px;
+  padding-bottom: 24px;
 }
 
 .menu {
@@ -139,7 +139,7 @@ body {
 
 .current::after {
   position: absolute;
-  top: 43px;
+  top: 42px;
   display: block;
   content: '';
   width: 100%;
@@ -544,7 +544,6 @@ body {
 
 .project-card {
   flex-basis: calc((100% - 48px) / 3);
-  border: 1px solid var(--border-color);
 }
 
 .portfolio-card-link {
@@ -574,6 +573,7 @@ body {
   height: 100%;
   top: 0;
   left: 0;
+  border: 1px solid var(--border-project-card-color);
   background-color: var(--action-color);
   transform: translate(0, 100%);
   transition: transform var(--transition-dur-and-func);
